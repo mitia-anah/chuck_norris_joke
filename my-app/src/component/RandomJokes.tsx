@@ -18,12 +18,12 @@ const Text = styled.p`
 `;
 function RandomJokes() {
     const context = useContext(GlobalContext);
-    const {randomJoke} = context;
-    console.log(randomJoke.map(joke => joke.value.joke));
+    const {jokes} = context;
+//  console.log(rand=> joke.value.joke));
         
     return (
         <div>
-            {randomJoke.map(joke => (
+            {jokes.map(joke => (
                 <Text key={joke.value.id}>
                     {joke.value.joke}
                 </Text>

@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Category from './component/Category';
 import DrawJokeButton from './component/DrawJokeButton';
 import { GlobalProvider } from './component/GlobalState'
 import Header from './component/Header';
@@ -32,7 +31,6 @@ function App() {
       <Wrapper className="App">
           <MainScreen>
             <Header />
-            {/* <Category />  */}
             <Impersonate/>
           </MainScreen>
       </Wrapper>

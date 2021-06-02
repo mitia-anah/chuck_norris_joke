@@ -71,8 +71,8 @@ export const GlobalProvider: React.FC = ({children}) => {
     async function getJokes() {
         const res = await fetch(RANDOM_JOKES)
         const data = await res.json()
-        // dispatch({type: "JOKES", jokes: [data]}) 
-        dispatch({type: "GET_RANDOM_JOKES", randomJoke: [data]}) 
+        dispatch({type: "JOKES", jokes: [data]}) 
+        // dispatch({type: "GET_RANDOM_JOKES", randomJoke: [data]}) 
     }
     // async function getCategory() {
     //     const res = await fetch(CATEGORY)
