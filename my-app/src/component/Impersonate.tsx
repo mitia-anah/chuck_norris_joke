@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import {RANDOM_JOKES} from './GlobalState'
 
 function Impersonate() {
-  const {dispatch, firstName, lastName} = useContext(GlobalContext);
+  const {dispatch} = useContext(GlobalContext);
 
 let firstNameValue = ''
 let lastNameValue = ''
@@ -23,15 +23,15 @@ async function handleOnSubmit(e: any) {
   }
   dispatch({
     type: 'IMPERSONATE_VALUE',
-    impersonateFirstName: firstNameValue,
-    impersonateLastName: lastNameValue,
+    firstName: firstNameValue,
+    lastName: lastNameValue,
   })
   const response = await fetch(
     `${RANDOM_JOKES}?firstName=${firstNameValue}&lastName=${lastNameValue}`
   )
   const result = await response.json()
   dispatch({
-    type: 'JOKES',
+    type: 'GET_RANDOM_JOKES',
     jokes: result,
   })
   console.log(result);

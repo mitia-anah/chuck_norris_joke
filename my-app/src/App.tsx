@@ -1,11 +1,8 @@
-import React from 'react';
 import './App.css';
-import DrawJokeButton from './component/DrawJokeButton';
 import { GlobalProvider } from './component/GlobalState'
 import Header from './component/Header';
 import styled from 'styled-components'
 import Impersonate from './component/Impersonate';
-// import RandomJokes from './component/RandomJokes';
 
 const Wrapper = styled.div`
   background-color: #f9f9f9;
