@@ -21,20 +21,25 @@ type JokesProps = {
 }; 
 
 type State = {
-    jokes: JokesProps[],
-    categories: Category[],
-    randomJoke: JokesProps[],
     firstName: string,
     lastName: string,
+    jokes: {},
+    randomJoke: JokesProps[],
     dispatch: React.Dispatch<any>,
     getJokes: () => void,
 }
 const initialState: State = {
-    jokes: [],
-    categories: [],
-    randomJoke: [],
     firstName: 'Chuck',
     lastName: 'Norris',
+    jokes: {
+        type: '',
+        value: {
+            id: '',
+            joke: '',
+            categories: []
+        }
+    },
+    randomJoke: [],
     dispatch: () => null,
     getJokes: () => {}
 };
@@ -71,7 +76,7 @@ export const GlobalProvider: React.FC = ({children}) => {
     async function getJokes() {
         const res = await fetch(RANDOM_JOKES)
         const data = await res.json()
-        dispatch({type: "JOKES", jokes: [data]}) 
+        dispatch({type: "JOKES", jokes: data}) 
         // dispatch({type: "GET_RANDOM_JOKES", randomJoke: [data]}) 
     }
     // async function getCategory() {
@@ -90,7 +95,6 @@ export const GlobalProvider: React.FC = ({children}) => {
         <GlobalContext.Provider value={{ 
             jokes: state.jokes,
             randomJoke: state.randomJoke,
-            categories: state.categories,
             firstName: state.firstName,
             lastName: state.lastName,
             getJokes,

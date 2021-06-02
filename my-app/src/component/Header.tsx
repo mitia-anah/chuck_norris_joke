@@ -37,16 +37,16 @@ export default Header
 // }
 // Context
 // const initialState: State = {
-// lastName: 'Norris',
-// firstName: 'Chuck',
-// joke: {
-//   type: '',
-//   value: {
-//     id: '',
-//     joke: '',
-//     category: [],
-//   },
-// },
+    // lastName: 'Norris',
+    // firstName: 'Chuck',
+    // joke: {
+    //   type: '',
+    //   value: {
+    //     id: '',
+    //     joke: '',
+    //     category: [],
+    //   },
+    // },
 // }
 // // context creator
 // export const GlobalContext = createContext<{

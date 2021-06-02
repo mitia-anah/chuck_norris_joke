@@ -12,15 +12,15 @@ let firstNameValue = ''
 let lastNameValue = ''
 
 async function handleOnSubmit(e: any) {
-//   e.preventDefault()
-//   const eventTarget = e.currentTarget.impersonate.value
-//   if (eventTarget.trim() === '') {
-//     firstNameValue = 'Chuck'
-//     lastNameValue = 'Norris'
-//   } else if (eventTarget.trim() !== '') {
-//     firstNameValue = eventTarget.split(' ').shift()
-//     lastNameValue = eventTarget.split(' ').slice(1).join(' ')
-//   }
+  e.preventDefault()
+  const eventTarget = e.currentTarget.impersonate.value
+  if (eventTarget.trim() === '') {
+    firstNameValue = 'Chuck'
+    lastNameValue = 'Norris'
+  } else if (eventTarget.trim() !== '') {
+    firstNameValue = eventTarget.split(' ').shift()
+    lastNameValue = eventTarget.split(' ').slice(1).join(' ')
+  }
   dispatch({
     type: 'IMPERSONATE_VALUE',
     impersonateFirstName: firstNameValue,
