@@ -1,7 +1,7 @@
 import React, { createContext , useEffect, useReducer, useState} from 'react'
 
-export const RANDOM_JOKES = 'http://api.icndb.com/jokes/random'
-const CATEGORY = 'http://api.icndb.com/categories'
+export const RANDOM_JOKES = 'https://api.icndb.com/jokes/random'
+const CATEGORY = 'https://api.icndb.com/categories'
 
 type Joke = {
     joke: string
@@ -82,6 +82,7 @@ export const GlobalProvider: React.FC = ({children}) => {
 
     useEffect(() => {
         getJokes()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
 
