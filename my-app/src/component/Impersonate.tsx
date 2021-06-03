@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import { useContext} from 'react'
 import DrawJokeButton from './DrawJokeButton';
 import { GlobalContext } from './GlobalState';
 import RandomJokes from './RandomJokes';

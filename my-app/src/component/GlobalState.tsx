@@ -1,7 +1,6 @@
-import React, { createContext , useEffect, useReducer, useState} from 'react'
+import React, { createContext , useEffect, useReducer} from 'react'
 
 export const RANDOM_JOKES = 'https://api.icndb.com/jokes/random'
-const CATEGORY = 'https://api.icndb.com/categories'
 
 type Joke = {
     joke: string
